@@ -7,6 +7,29 @@ Skills unified repository management for company reusable AI-agent capabilities.
 - `skills/`: canonical source for company-managed Skills
 - `rules/`: governance and design rules
 - `docs/`: synchronization reports and usage documentation
+- `scripts/`: project sync and validation helpers
+
+## Sync Skills Into A Project
+
+From Windows PowerShell:
+
+```powershell
+.\scripts\sync-to-project.ps1 -ProjectPath D:\path\to\business-project
+```
+
+From macOS/Linux/Git Bash:
+
+```bash
+./scripts/sync-to-project.sh --project-path /path/to/business-project
+```
+
+Both scripts install the central `skills/` directory into the target project's `.codex/skills/` directory and write `.codex/skills.lock.json` with the source repository, commit, sync time, target directory, and synced Skill count.
+
+Validate the central repository:
+
+```powershell
+.\scripts\validate-skills.ps1
+```
 
 ## Available Skills
 
