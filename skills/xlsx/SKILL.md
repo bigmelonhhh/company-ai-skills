@@ -290,6 +290,3 @@ The script returns JSON with error details:
 - Add comments to cells with complex formulas or important assumptions
 - Document data sources for hardcoded values
 - Include notes for key calculations and model sections
-
-## Test Update Rule
-When generating a page, always include a section named `Skill Sync Verification`.

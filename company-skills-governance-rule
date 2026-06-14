@@ -444,3 +444,15 @@ GPT / Codex 应优先建议：
 是否需要服务器？
   默认否。先用 Git 仓库。规模扩大后再加服务器或 release 制品分发。
 ```
+## Skill Improvement Workflow
+
+When a team member finds that an installed skill is inaccurate or incomplete during project work:
+
+1. Do not permanently modify `.codex/skills`.
+2. Record the failing prompt, actual output, expected output, and affected skill.
+3. Modify the source skill in the central `company-ai-skills` repository.
+4. Update `VERSION` and `CHANGELOG.md`.
+5. Add or update a test case under the skill.
+6. Validate the change in a clean test project by running the sync script.
+7. Submit a pull request.
+8. After merge, team members update by running the project sync script.
